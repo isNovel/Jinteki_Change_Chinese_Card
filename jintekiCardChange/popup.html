@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+  <style>
+    body {
+      width: 220px;
+      font-family: 'Microsoft YaHei', Arial, sans-serif;
+      text-align: center;
+      padding: 15px;
+      margin: 0;
+    }
+
+    h4 {
+      margin: 0 0 15px 0;
+      color: #333;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+
+    #statusDiv {
+      margin-top: 10px;
+      font-size: 12px;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+    }
+
+    .info {
+      font-size: 11px;
+      color: #6c757d;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+  <h4>🎴 图片替换控制</h4>
+  <button id="toggleBtn">启动图片替换</button>
+  <div id="statusDiv">状态：图片替换已关闭</div>
+  <div class="info">
+    📝 智能图片替换<br>
+    优先中文简体<br>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

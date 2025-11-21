@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "jinteki图片替换器",
+  "version": "3.6",
+  "description": "智能拦截并替换jinteki.net卡图：优先中文简体",
+  "permissions": [
+    "storage",
+    "tabs",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "https://www.jinteki.net/*",
+    "https://play.sneakdoorbeta.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.jinteki.net/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
